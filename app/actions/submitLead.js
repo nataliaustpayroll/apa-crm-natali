@@ -1,6 +1,7 @@
 'use server';
 
 import { supabaseAdmin } from '@/lib/supabaseAdmin';
+import { sendConfirmationEmail, sendAdminNotification } from '@/lib/email';
 
 const INQUIRY_TYPES = ['consulting', 'membership', 'training', 'general'];
 const ORG_SIZES = ['1–50', '51–200', '201–1000', '1000+'];
@@ -100,6 +101,33 @@ export async function submitLead(_prevState, formData) {
       metadata: {},
     });
     if (contactErr) throw contactErr;
+
+    // Fire the confirmation + notification emails. These must never break the
+    // submission, so failures are logged and swallowed.
+    const lead = {
+      name,
+      email,
+      phone,
+      company,
+      role,
+      type,
+      subject,
+      message,
+      ok_to_contact: okToContact,
+      attributes,
+    };
+    const results = await Promise.allSettled([
+      sendConfirmationEmail(lead),
+      sendAdminNotification(lead),
+    ]);
+    results.forEach((r, i) => {
+      const which = i === 0 ? 'confirmation' : 'admin notification';
+      if (r.status === 'rejected') {
+        console.error(`submitLead: ${which} email threw:`, r.reason);
+      } else if (!r.value?.ok) {
+        console.error(`submitLead: ${which} email failed:`, r.value?.error);
+      }
+    });
 
     return { ok: true, error: null };
   } catch (err) {
