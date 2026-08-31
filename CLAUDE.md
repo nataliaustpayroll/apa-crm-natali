@@ -7,14 +7,19 @@
 - Supabase project: bebuglzefwuxkaxqqfmf (region ap-southeast-2 / Sydney)
 - Supabase URL: https://bebuglzefwuxkaxqqfmf.supabase.co
 - Supabase service key: stored in .env.local + Vercel env (NOT recorded here — secret)
-- Resend account: [pending — Build 2]
+- Resend account: connected in code; API key in .env.local returns 401 (invalid) — needs a valid key
 
 ## Build (filled as we go)
 - Plan written: [done]
 - Build 1 (small) status: ✅ (PR #1 — merge after Vercel env vars set)
 - Admin account seeded: ✅ with email natali@austpayroll.com.au
-- Build 2 (all) status: [pending]
-- Resend domain verified: [pending]
+- Build 2 (all) status: ✅ code complete + verified locally (People directory w/ search,
+  Contacts pipeline w/ activity_log on every stage change, Orders, Newsletter, person history,
+  Resend confirmation + notification emails wired into submitLead). Migration 0002 applied.
+  Data-layer smoke tests pass; all 6 admin screens rendered behind login. NOT yet committed/merged.
+- Resend domain verified: ❌ — email code is complete and wired, but RESEND_API_KEY in .env.local
+  returns 401 (invalid API key). Needs a valid Resend key + confirmation send.apa.com.au is verified.
+  Re-run `node scripts/send-test-email.mjs` — it must print SENT before this can be ticked.
 
 # How to use this catalog
 
