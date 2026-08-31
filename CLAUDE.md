@@ -1,18 +1,18 @@
 # Project Catalog
 
 ## Stack (already installed and wired — record the values)
-- GitHub repo: [confirm]
-- Vercel project: [confirm]
-- Domain: [confirm]
-- Supabase project: [confirm]
-- Supabase URL: [confirm]
-- Supabase service key: [confirm]
-- Resend account: [confirm]
+- GitHub repo: nataliaustpayroll/apa-crm-natali (remote: natali)
+- Vercel project: apa-crm-natali
+- Domain: apa-crm-natali.vercel.app
+- Supabase project: bebuglzefwuxkaxqqfmf (region ap-southeast-2 / Sydney)
+- Supabase URL: https://bebuglzefwuxkaxqqfmf.supabase.co
+- Supabase service key: stored in .env.local + Vercel env (NOT recorded here — secret)
+- Resend account: [pending — Build 2]
 
 ## Build (filled as we go)
 - Plan written: [done]
-- Build 1 (small) status: [pending]
-- Admin account seeded: [pending]
+- Build 1 (small) status: ✅ (PR #1 — merge after Vercel env vars set)
+- Admin account seeded: ✅ with email natali@austpayroll.com.au
 - Build 2 (all) status: [pending]
 - Resend domain verified: [pending]
 
