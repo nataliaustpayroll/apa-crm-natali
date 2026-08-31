@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product Plan · Australian Payroll Association</title>
+<style>
+  :root{
+    --blue:#48608a;
+    --navy:#2a3850;
+    --gold:#F0BD18;
+    --gold-deep:#d7a329;
+    --bg:#EFF1F5;
+    --slate:#a0aec1;
+    --grey:#7f8897;
+    --charcoal:#3a3839;
+    --ink:#20293a;
+    --card:#ffffff;
+    --line:#dfe3ec;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:56px 24px 96px;}
+  header.doc{
+    border-bottom:3px solid var(--blue);
+    padding-bottom:28px;margin-bottom:40px;
+  }
+  .eyebrow{
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold-deep);font-weight:700;margin:0 0 10px;
+  }
+  h1{
+    font-size:38px;line-height:1.15;margin:0 0 8px;
+    color:var(--navy);font-weight:800;letter-spacing:-.01em;
+  }
+  .sub{color:var(--grey);font-size:16px;margin:0;}
+  h2{
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--blue);font-weight:700;margin:48px 0 16px;
+    padding-bottom:8px;border-bottom:1px solid var(--line);
+  }
+  h3{font-size:20px;color:var(--navy);margin:0 0 6px;font-weight:700;}
+  p{margin:0 0 16px;}
+  .lead-sentence{
+    font-size:19px;color:var(--ink);
+    border-left:4px solid var(--gold);
+    background:var(--card);
+    padding:18px 22px;border-radius:0 10px 10px 0;
+    margin:0 0 22px;
+  }
+  .meta{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 24px;margin:0 0 8px;}
+  .kv{display:grid;grid-template-columns:210px 1fr;gap:8px 20px;padding:14px 0;border-bottom:1px solid var(--line);}
+  .kv:last-child{border-bottom:none;}
+  .kv .k{color:var(--grey);font-weight:600;font-size:14px;}
+  .kv .v{color:var(--ink);}
+  .pill{display:inline-block;background:var(--bg);border:1px solid var(--line);color:var(--navy);
+    font-size:13px;font-weight:600;padding:3px 11px;border-radius:999px;margin:0 6px 6px 0;}
+  .pill.gold{background:#fdf6e0;border-color:#f0d98a;color:#8a6a11;}
+  .swatch{display:inline-flex;align-items:center;gap:8px;margin:0 12px 8px 0;font-size:13px;font-weight:600;color:var(--navy);}
+  .chip{width:16px;height:16px;border-radius:4px;border:1px solid rgba(0,0,0,.12);display:inline-block;}
+  .build{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 30px;margin:0 0 24px;}
+  .build.b1{border-top:5px solid var(--blue);}
+  .build.b2{border-top:5px solid var(--gold);}
+  .tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+    padding:4px 10px;border-radius:6px;margin-bottom:12px;}
+  .tag.b1{background:#e7ecf5;color:var(--blue);}
+  .tag.b2{background:#fdf6e0;color:#8a6a11;}
+  .goal{font-size:15px;color:var(--ink);margin:0 0 20px;}
+  .block-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);font-weight:700;margin:20px 0 10px;}
+  ul.check{list-style:none;padding:0;margin:0;}
+  ul.check li{position:relative;padding:7px 0 7px 34px;border-bottom:1px solid var(--line);font-size:15px;}
+  ul.check li:last-child{border-bottom:none;}
+  ul.check li::before{
+    content:"";position:absolute;left:0;top:9px;width:20px;height:20px;
+    border:2px solid var(--blue);border-radius:5px;background:transparent;
+  }
+  .b2 ul.check li::before{border-color:var(--gold-deep);}
+  .notbuild{background:var(--card);border:1px dashed var(--slate);border-radius:12px;padding:18px 22px;color:var(--grey);font-size:15px;}
+  footer.doc{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--grey);font-size:13px;}
+  code{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 6px;font-size:13px;color:var(--navy);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="doc">
+    <p class="eyebrow">Product Plan</p>
+    <h1>Australian Payroll Association</h1>
+    <p class="sub">A lead-capture CRM — consulting, training &amp; membership</p>
+  </header>
+
+  <h2>What we're actually building and why</h2>
+  <p class="lead-sentence">After this exists, every consulting, training, or membership inquiry that hits apa.com.au becomes an owned, tracked deal the moment it lands — so I can see it, work it to won or lost, and never again lose a warm lead to an email notification that no one followed up on.</p>
+  <p><strong>Who it's for:</strong> me as the operator (and the select team who work leads), plus the person on the other side of the form — a payroll or finance leader reaching out about consulting, membership, training, or a general question.</p>
+  <div class="notbuild">
+    <strong>Deliberately NOT building:</strong> no affiliates, no subscriptions, no cohorts, no analytics dashboards, no integrations beyond what's named here. If it isn't load-bearing for capturing and working a lead, it's out.
+  </div>
+
+  <h2>The interview, in brief</h2>
+  <div class="meta">
+    <div class="kv"><div class="k">Business</div><div class="v">Australian Payroll Association — consulting, training &amp; membership services for payroll and finance teams</div></div>
+    <div class="kv"><div class="k">The gap today</div><div class="v">A contact-form inquiry is only an email notification — never tracked as a deal, no owner, no follow-up reminders. Warm leads go cold. Newsletter bounces go unnoticed.</div></div>
+    <div class="kv"><div class="k">90-day win</div><div class="v">Every inquiry either converts to a sale within a week, or is marked lost with a follow-up sequence triggered — and someone is actively reviewing bounced newsletter emails.</div></div>
+    <div class="kv"><div class="k">Volume</div><div class="v">~20 inquiries per week</div></div>
+    <div class="kv"><div class="k">Inquiry types</div><div class="v"><span class="pill">consulting</span><span class="pill">membership</span><span class="pill">training</span><span class="pill">general</span></div></div>
+    <div class="kv"><div class="k">Design system</div><div class="v">Academic, modernized — serious, structured, trustworthy, with the calm and white space of Minimalist Apple</div></div>
+    <div class="kv"><div class="k">Brand colors</div><div class="v">
+      <span class="swatch"><span class="chip" style="background:#48608a"></span>#48608a blue</span>
+      <span class="swatch"><span class="chip" style="background:#F0BD18"></span>#F0BD18 gold</span>
+      <span class="swatch"><span class="chip" style="background:#EFF1F5"></span>#EFF1F5 bg</span>
+      <span class="swatch"><span class="chip" style="background:#2a3850"></span>#2a3850 navy</span>
+      <span class="swatch"><span class="chip" style="background:#7f8897"></span>#7f8897 grey</span>
+      <br><span style="font-size:13px;color:var(--grey)">Type: Montserrat Semibold headings · Source Sans Pro body · no gradients</span>
+    </div></div>
+    <div class="kv"><div class="k">Custom attributes</div><div class="v">
+      <span class="pill">org_size — list: 1–50 / 51–200 / 201–1000 / 1000+</span>
+      <span class="pill">payroll_system — typed note</span>
+      <span class="pill">time_attendance_system — typed note</span>
+    </div></div>
+    <div class="kv"><div class="k">Domain</div><div class="v">apa.com.au</div></div>
+  </div>
+
+  <h2>The four parts of the CRM</h2>
+  <div class="meta">
+    <div class="kv"><div class="k">People</div><div class="v">Contact directory, one row per person, deduplicated by <code>email</code>. Custom attributes live in <code>attributes</code> (jsonb).</div></div>
+    <div class="kv"><div class="k">Contacts</div><div class="v">Inquiry pipeline. Each links to a person and moves through <code>new_lead → contacted → discovery_call → proposal → won / lost</code>. <code>type</code> constrained to consulting, membership, training, general.</div></div>
+    <div class="kv"><div class="k">activity_log</div><div class="v">Every status change on a Contacts row writes one row here.</div></div>
+    <div class="kv"><div class="k">Orders</div><div class="v">What people bought — product, amount, currency, status.</div></div>
+    <div class="kv"><div class="k">Newsletter</div><div class="v">Not a table. Tracked by <code>people.ok_to_contact = true</code>.</div></div>
+  </div>
+
+  <h2>Build 1 (small) — Prove the loop</h2>
+  <div class="build b1">
+    <span class="tag b1">Build 1 · Smallest thing that proves it works</span>
+    <h3>Goal</h3>
+    <p class="goal">A stranger can submit an inquiry on my live site and I can see that lead inside <code>/admin</code>, on the same day, without anyone touching the database by hand. This closes the exact gap in the interview. Nothing else matters until this is real.</p>
+
+    <div class="block-label">Scope</div>
+    <p class="goal">The People and Contacts tables with custom attributes wired into the jsonb column; a working contact form on the live marketing site that writes a People row (upserted by email) and a linked Contacts row; one admin login with a single verified account; one admin page that lists incoming leads newest first.</p>
+
+    <div class="block-label">Definition of Done</div>
+    <ul class="check">
+      <li>The contact form is live on my real domain, not localhost.</li>
+      <li>Submitting it creates exactly one People row and one linked Contacts row, deduplicated by email on repeat submits.</li>
+      <li>My chosen custom attributes are saved correctly inside <code>attributes</code>.</li>
+      <li>A new Contacts row lands in status <code>new_lead</code>.</li>
+      <li>I can log in to <code>/admin</code> with my one seeded account.</li>
+      <li>The admin leads page shows the submission within seconds, newest first.</li>
+      <li>I personally run the full flow once: submit as a visitor, log in, see it.</li>
+    </ul>
+
+    <div class="block-label">Success Criteria</div>
+    <ul class="check">
+      <li>From a cold start, I can go from submit to visible in under 60 seconds.</li>
+      <li>Two submissions from the same email produce one person, not two.</li>
+      <li>I can read the lead's name, type, message, and custom attributes on the admin page without opening Supabase.</li>
+      <li>No lead can land and go unseen — the failure mode from the interview.</li>
+    </ul>
+  </div>
+
+  <h2>Build 2 (all) — The system I run the business from</h2>
+  <div class="build b2">
+    <span class="tag b2">Build 2 · Make it the real workspace</span>
+    <h3>Goal</h3>
+    <p class="goal">Turn the proven loop into the place I actually manage relationships and money. I work leads, record what people bought, and keep my newsletter list entirely from <code>/admin</code> behind my login, and every new lead gets an automatic confirmation email. This is what makes the 90-day win achievable.</p>
+
+    <div class="block-label">Scope</div>
+    <p class="goal">The rest of the <code>/admin</code> back end behind my login: the full People directory, all inquiries with working pipeline stages, the Orders list, and the Newsletter list (<code>ok_to_contact = true</code>). Plus Resend wired so a confirmation email fires on form submit. Every Contacts status change writes an activity_log row.</p>
+
+    <div class="block-label">Definition of Done</div>
+    <ul class="check">
+      <li>All four parts (People, Contacts, Orders, Newsletter) are visible and usable in <code>/admin</code>, and all of <code>/admin</code> sits behind my login.</li>
+      <li>I can move a Contacts row through <code>new_lead → contacted → discovery_call → proposal → won / lost</code> from the interface.</li>
+      <li>Each status change writes one activity_log row with from_status, to_status, and actor.</li>
+      <li>The People directory is searchable and shows my custom attributes.</li>
+      <li>I can add an Orders row against a person and see it on their record.</li>
+      <li>The Newsletter list shows everyone with <code>ok_to_contact = true</code>.</li>
+      <li>Resend is connected, the sending domain is verified, and a real confirmation email arrives after a form submit.</li>
+    </ul>
+
+    <div class="block-label">Success Criteria</div>
+    <ul class="check">
+      <li>I can run a lead from first inquiry to won without leaving <code>/admin</code> or touching the database.</li>
+      <li>A person's full history (inquiries, status changes, and orders) is visible in one place.</li>
+      <li>A test submission produces a confirmation email in the inbox, not spam, with my domain as the sender.</li>
+      <li>Nothing in <code>/admin</code> is reachable without logging in.</li>
+      <li>At ~20 inquiries a week, this keeps up without me dropping to the database by hand.</li>
+    </ul>
+  </div>
+
+  <footer class="doc">
+    Australian Payroll Association · apa.com.au — This HTML is a formatted view of Working Files/product-plan.md. If anything disagrees with CLAUDE.md, CLAUDE.md wins.
+  </footer>
+
+</div>
+</body>
+</html>
